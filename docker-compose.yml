@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  portfolio:
+    build: .
+    user: root
+    restart: always
+    ports:
+      - "5000:5000"
+    # command: gunicorn -w 1 -b 0.0.0.0:5000 wsgi:app
+    volumes:
+      - .:/opt/Portfolio
+    environment:
+      - FLASK_DEBUG=1
+
+  nginx:
+      image: nginx:stable
+      restart: always
+      volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      ports:
+        - 80:80
+      depends_on:
+        - portfolio

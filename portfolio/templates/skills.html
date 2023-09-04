@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="row">
+    <h1 class="headings"><i class="bi bi-speedometer2 heading-icon"></i> Skills</h1>
+    <div class="overflow-x-auto card2">
+        <div class="mb-3">
+            <h5><strong>Security</strong></h5>
+            <div class="d-flex flex-wrap p-2">
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/burp.png') }}" alt="" style="max-height: 1.5rem;"> Burp</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/nmap.png') }}" alt="" style="max-height: 1.5rem;"> Nmap</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/wireshark.png') }}" alt="" style="max-height: 1.5rem;"> Wireshark</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/nessus.png') }}" alt="" style="max-height: 1.5rem;"> Nessus</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/linux.png') }}" alt="" style="max-height: 1.5rem;"> Linux</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/nuclei.png') }}" alt="" style="max-height: 1.5rem;"> Nuclei</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/metasploit.png') }}" alt="" style="max-height: 1.5rem;"> Metasploit</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/nikto.png') }}" alt="" style="max-height: 1.5rem;"> Nikto</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/acunetix.png') }}" alt="" style="max-height: 1.5rem;"> Acunetix</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/scoutsuite.png') }}" alt="" style="max-height: 1.5rem;"> Scout Suite</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/nexpose.png') }}" alt="" style="max-height: 1.5rem;"> Nexpose</p>
+            </div>
+        </div>
+        <div class="mb-3">
+            <h5><strong>Programming Languages</strong></h5>
+            <div class="d-flex flex-wrap p-2">
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/python.png') }}" alt="" style="max-height: 1.5rem;"> Python</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/bash.png') }}" alt="" style="max-height: 1.5rem;"> Bash</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/java.png') }}" alt="" style="max-height: 1.5rem;"> Java</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/js.png') }}" alt="" style="max-height: 1.5rem;"> JavaScript</p>
+            </div>
+        </div>
+        <div class="mb-4">
+            <h5><strong>DevOps</strong></h5>
+            <div class="d-flex flex-wrap p-2">
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/docker.png') }}" alt="" style="max-height: 1.5rem;"> Docker</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/kuber.png') }}" alt="" style="max-height: 1.5rem;"> Kubernetes</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/jenkins.png') }}" alt="" style="max-height: 1.5rem;"> Jenkins</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/git.png') }}" alt="" style="max-height: 1.5rem;"> Git</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/postman.png') }}" alt="" style="max-height: 1.5rem;"> Postman</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/github.png') }}" alt="" style="max-height: 1.5rem;"> GitHub</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/html.png') }}" alt="" style="max-height: 1.5rem;"> HTML</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/css.png') }}" alt="" style="max-height: 1.5rem;"> CSS</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/bootstrap.png') }}" alt="" style="max-height: 1.5rem;"> Bootstrap</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/react.png') }}" alt="" style="max-height: 1.5rem;"> React</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/flask.png') }}" alt="" style="max-height: 1.5rem;"> Flask</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/django.png') }}" alt="" style="max-height: 1.5rem;"> Django</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/express.png') }}" alt="" style="max-height: 1.5rem;"> Express</p>
+            </div>
+        </div>
+        <div class="mb-1">
+            <h5><strong>Databases</strong></h5>
+            <div class="d-flex flex-wrap p-2">
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/mysql.png') }}" alt="" style="max-height: 1.5rem;"> MySQL</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/sqlite.png') }}" alt="" style="max-height: 1.5rem;"> SQLite</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/postgresql.png') }}" alt="" style="max-height: 1.5rem;"> PostgreSQL</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/mongodb.png') }}" alt="" style="max-height: 1.5rem;"> MongoDB</p>
+                <p class="skill-badge"><img class="img-fluid" src="{{ url_for('static', filename='skills/mariadb.png') }}" alt="" style="max-height: 1.5rem;"> MariaDB</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+{% endblock content %}

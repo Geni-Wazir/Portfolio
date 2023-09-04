@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="row">
+    <h1 class="headings"><i class="bi bi-blockquote-left heading-icon"></i> Blogs</h1>
+    <div class="overflow-x-auto card2">
+        <div class="row mb-5" data-masonry   ='{"percentPosition": false }'  id="imageContainer">
+            {% if blogs|length < 1 %}
+            <p class="text-center justify-content-center blog-text"><strong>Coming Soon</strong></p>
+            {% else %}
+            {% for blog in blogs %}
+            <div class="col-sm mb-3 blog-card">
+                <div class="card blog">
+                    <img src="{{ blog['image'] }}" class="card-img-top blog-img" alt="Responsive image">
+                    <div class="card-body">
+                        <a href="{{ blog['url'] }}" target="_blank" style="text-decoration:none; color: #212529;">
+                        <h5 class="fw-bold mb-3">{{ blog['title'] }}</i></h5></a>
+                        <p class="text-muted mb-4"><i class="bi bi-calendar3 m-2" aria-hidden="true"></i>{{ blog['date'] }}</p>
+                        <div class="mb-0">
+                            <p class="mb-4">
+                                {{ blog['summary']|safe }}
+                            </p>
+                            <p>
+                                <i class="bi bi-medium" style="font-size: 1.6rem;"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}
