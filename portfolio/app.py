@@ -1,4 +1,4 @@
-from flask import Flask, flash, render_template, url_for, redirect
+from flask import Flask, render_template
 import feedparser
 
 
@@ -49,4 +49,4 @@ def blogs():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=False, port=5000)
