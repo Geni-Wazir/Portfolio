@@ -1,13 +1,9 @@
-from flask import Flask, render_template, url_for, redirect
+from flask import Flask, flash, render_template, url_for, redirect
 import feedparser
 
 
 
-
-
-app = Flask(__name__)    
-app.config['SECRET_KEY'] = '3fd5f6f457adc67ee57d46373dc1b62d7d26a543'
-
+app = Flask(__name__)
 
 
 
@@ -50,9 +46,6 @@ def blogs():
         blogs.append(post)
     return render_template('blogs.html', blogs=blogs)
 
-@app.route('/connect')
-def connect():
-    return render_template('connect.html')
 
 
 if __name__ == "__main__":

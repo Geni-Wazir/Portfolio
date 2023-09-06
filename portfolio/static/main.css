@@ -11,8 +11,6 @@ body{
 }
 
 
-
-
 .profile-img{
   	margin-top: 1rem;
     border-radius: 1rem;
@@ -54,26 +52,34 @@ body{
 .profile-card{
   max-width: 25rem;
   margin-right: 2rem;
+  box-shadow: #b3b3b4 0.5rem 0.5rem;
 }
 
 
 .card2{
 	height: 43.5rem;
-  }
+}
+
+.home-cert{
+  padding: 0 0 0 5rem;
+}
 
 .blog-text{
-    background: rgb(2,0,36);
-    background: linear-gradient(320deg, rgba(2,0,36,1) 0%, rgb(55, 3, 3) 10%, rgb(255, 0, 0) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 10rem;
-    padding-top: 5rem;
+    color: rgb(174, 173, 173);
+    font-size: 5em;
+    font-family: "Inter,system-ui,sans-serif";
+    padding-top: 15rem;
   }
 
 @media screen and (max-width: 600px) {
 
   .profile-card{
     max-width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: none;
+  }
+  .home-cert{
+    padding: 0 0 0 3rem;
   }
 	.btns{
 		font-size: 1rem;
@@ -108,15 +114,6 @@ body{
 		color:rgb(0, 0, 0);
 		margin-right: 0.5rem;
 	}
-
-  	.blog-text{
-		background: rgb(2,0,36);
-		background: linear-gradient(320deg, rgba(2,0,36,1) 0%, rgb(121, 9, 9) 35%, rgb(255, 47, 0) 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		padding-top: 10rem;
-		font-size: 6rem;
-    }
 
 }
 
@@ -264,39 +261,36 @@ body{
 
 .blog-card{
 	max-width: 26.5rem;
-  }
-
-
+}
 
 .project-card{
 	max-width: 17.8rem;
-  }
-
+}
 
 
 
 /* width */
 ::-webkit-scrollbar {
     width: 0.4rem;
-  }
+}
   
   /* Track */
   ::-webkit-scrollbar-track {
     box-shadow: inset rgba(255, 255, 255, 0);
     border-radius: 1rem;
-  }
+}
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: rgb(0, 0, 0);
     border-radius: 1rem;
-  }
+}
 
 
   /* The actual timeline (the vertical ruler) */
   .main-timeline-2 {
     position: relative;
-  }
+}
   
   /* The actual timeline (the vertical ruler) */
   .main-timeline-2::after {
