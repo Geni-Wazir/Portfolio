@@ -41,8 +41,8 @@ def blogs():
         post['title'] = entry.title
         post['url'] = entry.link[:entry.link.index("?source=rss")]
         post['date'] = entry.published[5:16]
-        post['image'] = entry.summary[entry.summary.index("<img src=")+10:entry.summary.index(' width=')-1]
-        post['summary'] = entry.summary[entry.summary.index('class="medium-feed-snippet')+28:entry.summary.index('</p><p class="medium-feed-link"')]
+        post['image'] = entry.summary[entry.summary.index("https://cdn-images-1.medium.com"):entry.summary.index(' /')-1]
+        post['summary'] = entry.summary[entry.summary.index('<p>')+3:entry.summary.index('<p>')+453] + "...."
         blogs.append(post)
     return render_template('blogs.html', blogs=blogs)
 
