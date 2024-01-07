@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import feedparser
+import re
 
 
 
@@ -31,6 +32,13 @@ def skills():
 def projects():
     return render_template('projects.html')
 
+
+CLEANR = re.compile('<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});')
+def cleanhtml(raw_html):
+  cleantext = re.sub(CLEANR, '', raw_html)
+  return cleantext
+
+
 @app.route('/blogs')
 def blogs():
     blogs = []
@@ -42,7 +50,7 @@ def blogs():
         post['url'] = entry.link[:entry.link.index("?source=rss")]
         post['date'] = entry.published[5:16]
         post['image'] = entry.summary[entry.summary.index("https://cdn-images-1.medium.com"):entry.summary.index(' /')-1]
-        post['summary'] = entry.summary[entry.summary.index('<p>')+3:entry.summary.index('<p>')+453] + "...."
+        post['summary'] = cleanhtml(entry.summary[entry.summary.index('<p>')+3:entry.summary.index('<p>')+500]) + "<strong>......</strong>"
         blogs.append(post)
     return render_template('blogs.html', blogs=blogs)
 
